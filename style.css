@@ -1,0 +1,755 @@
+body {
+  background-color: #fbf4eb;
+/*   cursor:url(https://cdn.glitch.global/484d7837-d5e8-46aa-bef6-8b0a424eea49/IMG_4796.PNG?v=1659025846515), auto; */
+}
+/* a, button{
+  cursor:url(https://cdn.glitch.global/484d7837-d5e8-46aa-bef6-8b0a424eea49/IMG_4796.PNG?v=1659025846515), pointer!important;
+} */
+
+.navbar {
+  background-color: #c08564;
+}
+.contact-button {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  padding: 10px;
+}
+.navbar-buttons {
+  background-color: #fbf4eb;
+  color: #c08564;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 25px;
+  margin: 0px 15px;
+  font-family: "Khand", sans-serif;
+}
+
+.current-navbar-buttons {
+  background-color: #46433f;
+  color: #fbf4eb;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 25px;
+  margin: 0px 15px;
+  font-family: "Khand", sans-serif;
+}
+
+#card-one {
+  margin-left: 70px;
+  margin-top: 100px;
+}
+
+#card-two {
+  margin-top: 30px;
+}
+
+.badge {
+  color: #c08564;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  height: 394px;
+  width: 394px;
+  border-radius: 50%;
+  background: #f0e8e4;
+}
+h1 {
+  font-family: "Khand", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 61px;
+  text-align: center;
+  letter-spacing: 0.09em;
+  text-decoration-line: underline;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-auto-rows: minmax(150px, auto);
+}
+.grid-container > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  color: #c08564;
+}
+
+#about-me-description {
+  font-family: "Khand", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 193.9%;
+  letter-spacing: 0.09em;
+  color: #c08564;
+  margin-left: 20%;
+}
+.bolded {
+  font-weight: bold;
+}
+
+#about-row {
+  margin-top: 12%;
+}
+
+#my-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20%;
+}
+
+.animation-placeholder {
+  display: flex;
+  justify-content: center;
+  padding-top: 15%;
+  width: 200%;
+}
+
+p {
+  font-family: "Khand", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 61px;
+  letter-spacing: 0.09em;
+
+  color: #c08564;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* animation */
+
+/* DOG */
+
+.dog {
+  background-color: #ffd77a;
+}
+
+@keyframes hinge-animation {
+  50% {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes bob-animation {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, 0.76%);
+  }
+}
+
+@keyframes bob-animation-hearts {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-0.5%, 1%);
+  }
+}
+
+@keyframes left-leg-animation {
+  50% {
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes right-leg-animation {
+  50% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes earth-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+transform: rotate(40deg);
+50% {
+  opacity: 0;
+}
+100% {
+  transform: rotate(70deg);
+  opacity: 0;
+}
+
+.dog-parts {
+  position: relative;
+  margin: auto;
+  width: 20%;
+  aspect-ratio: 1/3;
+}
+
+.dog-parts > * {
+  width: 100%;
+}
+
+#basket {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#body,
+#left-ear,
+#right-ear,
+#earth,
+#hearts,
+#left-leg,
+#right-leg,
+#basket {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* dog earth excluded */
+#body,
+#left-ear,
+#right-ear,
+#hearts,
+#left-leg,
+#right-leg,
+#basket {
+  animation-name: bob-animation;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  transform-origin: 50%;
+}
+
+#left-ear {
+  /*   bottom */
+  animation-name: hinge-animation;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  transform-origin: 51% 13%;
+}
+
+#right-ear {
+  /*   bottom */
+  animation-name: hinge-animation;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 0.1s;
+  transform-origin: 58% 15%;
+}
+
+#hearts {
+  animation-name: bob-animation-hearts;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+  animation-delay: 0.1s;
+}
+
+#left-leg {
+  animation-name: left-leg-animation;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  transform-origin: 52% 34%;
+}
+
+#right-leg {
+  animation-name: right-leg-animation;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  transform-origin: 50% 34%;
+}
+
+#earth {
+  animation-name: earth-spin;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 70%;
+}
+
+/* PAIMON */
+
+.paimon {
+  background-color: #fcfce8;
+}
+
+.paimon-whole {
+  display: flex;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  width: 50%;
+  aspect-ratio: 2.5/1;
+}
+
+.paimon-whole > * {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.paimon-whole > * > img {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.just-paimon,
+.paimon-food {
+  aspect-ratio: 115/86;
+}
+
+@keyframes paimon-float {
+  0% {
+    transform: translateY(-2%);
+  }
+  50% {
+    transform: translateY(2%);
+  }
+  100% {
+    transform: translateY(-2%);
+  }
+}
+
+#paimon-head,
+#paimon-scarf {
+  animation: paimon-float 4.5s ease-in-out;
+  animation-iteration-count: infinite;
+  transform-origin: top;
+}
+
+@keyframes paimon-right-arm-animation {
+  0% {
+    transform: translateY(-2%) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(2%) rotate(3deg);
+  }
+  100% {
+    transform: translateY(-2%) rotate(-3deg);
+  }
+}
+
+#paimon-right-arm {
+  position: absolute;
+  animation: paimon-right-arm-animation 4.5s ease-in-out 0s infinite;
+  transform-origin: 49% 48%;
+}
+
+@keyframes paimon-left-arm-animation {
+  0% {
+    transform: translateY(-2%) rotate(3deg);
+  }
+  50% {
+    transform: translateY(2%) rotate(-3deg);
+  }
+  100% {
+    transform: translateY(-2%) rotate(3deg);
+  }
+}
+#paimon-left-arm {
+  position: absolute;
+  animation: paimon-left-arm-animation 4.5s ease-in-out 0s infinite;
+  transform-origin: 50% 46%;
+}
+
+@keyframes paimon-left-leg-animation {
+  0% {
+    transform: translateY(-2%) rotate(1deg);
+  }
+  50% {
+    transform: translateY(1%) rotate(-1deg) translateX(0.5%);
+  }
+  100% {
+    transform: translateY(-2%) rotate(1deg);
+  }
+}
+#paimon-left-leg {
+  position: absolute;
+  animation: paimon-left-leg-animation 4.5s ease-in-out 0s infinite;
+  transform-origin: 52% 56%;
+}
+
+@keyframes paimon-right-leg-animation {
+  0% {
+    transform: translateY(-2%) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(1%) rotate(1deg);
+  }
+  100% {
+    transform: translateY(-2%) rotate(-1deg);
+  }
+}
+#paimon-right-leg {
+  position: absolute;
+  animation: paimon-right-leg-animation 4.5s ease-in-out 0s infinite;
+  transform-origin: 57.6% 52.5%;
+}
+
+@keyframes paimon-tail-one-animation {
+  0% {
+    transform: translateY(-2%) rotate(0deg) translateX(-1.2%);
+  }
+  55% {
+    transform: translateY(2%) rotate(-0deg);
+  }
+  100% {
+    transform: translateY(-2%) rotate(0deg) translateX(-1.2%);
+  }
+}
+
+#paimon-tail-one {
+  position: absolute;
+  animation: paimon-tail-one-animation 4.5s ease-in-out 0s infinite;
+  transform-origin: 56% 42%;
+}
+
+@keyframes paimon-tail-two-animation {
+  0% {
+    transform: translateX(-0.5%) translateY(-2%) rotate(2deg);
+  }
+  50% {
+    transform: translateX(0.5%) translateY(2%) rotate(-2deg);
+  }
+  100% {
+    transform: translateX(-0.5%) translateY(-2%) rotate(2deg);
+  }
+}
+
+#paimon-tail-two {
+  position: absolute;
+  animation: paimon-tail-two-animation 4.5s ease-in-out 0s infinite;
+  transform-origin: 59% 48%;
+}
+
+@keyframes paimon-chicken-animation {
+  0% {
+    transform: translateY(0%);
+    opacity: 0%;
+  }
+  35% {
+    opacity: 100%;
+  }
+  50% {
+    transform: translateX(-7%) translateY(-4%);
+    opacity: 0%;
+  }
+}
+
+#paimon-chicken {
+  position: absolute;
+  opacity: 0;
+  animation: paimon-chicken-animation 1s ease-in-out 0s infinite;
+  transform-origin: center;
+}
+
+@keyframes paimon-dango-animation {
+  0% {
+    transform: translateY(0%);
+    opacity: 0%;
+  }
+  35% {
+    opacity: 100%;
+  }
+  50% {
+    transform: translateX(7%) translateY(6%);
+    opacity: 0%;
+  }
+}
+
+#paimon-dango {
+  position: absolute;
+  opacity: 0;
+  animation: paimon-dango-animation 1s ease-in-out 0.5s infinite;
+  transform-origin: center;
+  margin-left: 5%;
+}
+
+/* Kirby */
+
+.kirby {
+  background-color: #ffe3e9;
+}
+
+.kirby-whole {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  aspect-ratio: 1.5/1;
+}
+
+.kirby-whole > * {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 2109/1235;
+}
+
+@keyframes kirby-body-squish-animation {
+  50% {
+    transform: scale(1.1, 0.95);
+  }
+}
+
+#kirby-body {
+  position: absolute;
+  animation: kirby-body-squish-animation 5s ease-in-out 0s infinite;
+  transform-origin: bottom;
+}
+
+#kirby-mouth {
+  position: absolute;
+  animation: kirby-body-squish-animation 5s ease-in-out 0s infinite;
+  transform-origin: bottom;
+}
+
+@keyframes kirby-left-hand-animation {
+  50% {
+    transform: scale(1.05, 0.98) translateX(0.5%);
+  }
+}
+
+#kirby-left-hand {
+  position: absolute;
+  animation: kirby-left-hand-animation 5s ease-in-out 0s infinite;
+  transform-origin: bottom;
+}
+
+#kirby-right-hand {
+  position: absolute;
+  animation: kirby-left-hand-animation 5s ease-in-out 0s infinite;
+  transform-origin: bottom;
+}
+
+@keyframes kirby-shoe-animation {
+  50% {
+    transform: scale(1.02, 0.9) translateX(-0.9%);
+  }
+}
+
+#kirby-shoe {
+  position: absolute;
+  animation: kirby-shoe-animation 5s ease-in-out 0s infinite;
+  transform-origin: 19% 73%;
+}
+
+@keyframes kirby-bubble-animation {
+  50% {
+    transform: scale(1.2, 1.2) translateX(1%) translateY(2%);
+  }
+}
+
+#kirby-bubble {
+  position: absolute;
+  animation: kirby-bubble-animation 5s ease-in-out 0s infinite;
+  transform-origin: 63.6% 60%;
+}
+
+/* ENVELOPE */
+
+.envelope {
+  background-color: #d6f9fb;
+}
+
+.envelope-whole {
+  position: relative;
+  display: flex;
+
+  margin-right: auto;
+  margin-left: auto;
+  width: 30%;
+  aspect-ratio: 1/1.5;
+  overflow:hidden;
+}
+
+.envelope-whole > * {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@keyframes envelope-base-animation {
+  0% {
+    transform: translateY(100%);
+  }
+  25% {
+    transform: translateY(-0.5%);
+  }
+  28% {
+    transform: translateY(0%);
+  }
+  80% {
+    transform: translateY(0%);
+  }
+  83% {
+    transform: translateY(0.5%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+#envelope-base {
+  position: absolute;
+  animation: envelope-base-animation 5s ease-in-out .5s infinite;
+  transform-origin: center;
+  z-index: 0;
+}
+
+#envelope-back {
+  position: absolute;
+  animation: envelope-base-animation 5s ease-in-out .5s infinite;
+  transform-origin: center;
+}
+@keyframes envelope-flap-animation {
+  0% {
+    transform: translateY(100%)scaleY(-1);z-index: 2;
+  }
+  25% {
+    transform: translateY(-0.5%)scaleY(-1);z-index: 2;
+  }
+  28% {
+    transform: translateY(0%)scaleY(1);z-index: 0;
+  }
+  80% {
+    transform: translateY(0%)scaleY(1);z-index: 0;
+  }
+  83% {
+    transform: translateY(0.5%)scaleY(-1);z-index: 2;
+  }
+  100% {
+    transform: translateY(-100%)scaleY(-1);z-index: 2;
+  }
+}
+#envelope-flap {
+  position: absolute;
+  animation: envelope-flap-animation 5s ease-in-out .5s infinite;
+  transform-origin: 50% 44.49%;
+  
+}
+@keyframes envelope-letter-animation {
+  0% {
+    transform: translateY(100%);
+      clip-path: polygon(0% 5%, 100% 5%, 100% 75%, 0% 75%); 
+    
+  }
+  25% {
+    transform: translateY(-0.5%);
+    
+  }
+  28% {
+    transform: translateY(0%) translateX(0%);
+    clip-path: polygon(0% 5%, 100% 5%, 100% 75%, 0% 75%);
+  }
+  40% {
+    transform: translateY(-15%);
+    clip-path: polygon(0% 5%, 100% 5%, 100% 90%, 0% 90%);
+  }
+  70% {
+    transform: translateY(-15%);
+    clip-path: polygon(0% 5%, 100% 5%, 100% 90%, 0% 90%);
+  }
+  80% {
+    transform: translateY(0%);
+    clip-path: polygon(0% 5%, 100% 5%, 100% 75%, 0% 75%);
+  }
+  83% {
+    transform: translateY(0.5%);
+    
+  }
+  100% {
+    transform: translateY(-100%);
+  clip-path: polygon(0% 5%, 100% 5%, 100% 75%, 0% 75%);
+  }
+}
+#envelope-letter {
+  position: absolute;
+  animation: envelope-letter-animation 5s ease-in-out .5s infinite;
+  transform-origin: center;
+  /* clip-path: polygon(0% 5%, 100% 5%, 100% 75%, 0% 75%) */
+}
+
+/* .mask{
+  -webkit-mask-image: url(https://cdn.glitch.global/484d7837-d5e8-46aa-bef6-8b0a424eea49/IMG_4792.PNG?v=1658944954533);
+  mask-image: url(https://cdn.glitch.global/484d7837-d5e8-46aa-bef6-8b0a424eea49/IMG_4792.PNG?v=1658944954533);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+} */
+
+#envelope-mask {
+  position: absolute;
+  animation: envelope-base-animation 5s ease-in-out .5s infinite;
+  transform-origin: center;
+}
+
+/* OTHER */
+
+.gallery-positioning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 576px) {
+  .dog-parts {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .paimon-whole {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .kirby-whole {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .envelope-whole {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    width: 60%;
+  }
+}
+
